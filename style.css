@@ -30,24 +30,24 @@ body {
 /* Keyframes for reduced movement around */
 @keyframes moveAround {
   0% {
-    top: 0%;
-    left: 0%;
+    top: 30%;
+    left: 15%;
   }
   25% {
-    top: 0%;
-    left: 35% /* Move slightly to the right */
+    top: 32%;
+    left: 11%;/* Move slightly to the right */
   }
   50% {
-    top: 60%; /* Move slightly to the bottom */
-    left: 35%; /* Stay slightly to the right */
+    top: 27%;
+    left: 17%;
   }
   75% {
-    top: 60%; /* Stay slightly at the bottom */
-    left: 0%; /* Move slightly to the left */
+    top: 30%;
+    left: 25%;
   }
   100% {
-    top: 0%;
-    left: 0%; /* Back to starting point */
+    top: 30%;
+    left: 15%;
   }
 }
 
