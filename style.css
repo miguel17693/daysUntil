@@ -31,15 +31,18 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* Digital Clock Display */
+/* Digital Clock Display with Glass Effect */
 #digital-clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #98FF98;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Outer shadow for depth */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle inner border */
   margin-bottom: 40px;
   flex-wrap: nowrap; /* Prevent wrapping */
   flex-shrink: 1; /* Allow shrinking */
