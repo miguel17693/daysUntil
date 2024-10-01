@@ -23,7 +23,7 @@ body {
   padding: 40px 20px;
   text-align: center;
   position: absolute; /* Absolute positioning */
-  animation: moveAround 4s infinite; /* Animation for smooth movement */
+  animation: moveAround 20s infinite; /* Animation for smooth movement */
   border-radius: 10px;
 }
 
