@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Hide any overflow */
+  overflow: hidden; /* Hide overflow */
 }
 
 /* Container with animation */
@@ -25,29 +25,30 @@ body {
   position: absolute; /* Absolute positioning */
   animation: moveAround 10s infinite; /* Animation to move around */
   border-radius: 10px;
+  max-width: 300px; /* Limit container width */
 }
 
-/* Keyframes for moving around */
+/* Keyframes for moving around within the viewport */
 @keyframes moveAround {
   0% {
-    top: 10px;
-    left: 10px;
+    top: 5%;
+    left: 5%;
   }
   25% {
-    top: 10px;
-    left: calc(100% - 300px); /* Move to the right */
+    top: 5%;
+    left: calc(95% - 300px); /* Move to the right, stay inside viewport */
   }
   50% {
-    top: calc(100% - 300px); /* Move to the bottom */
-    left: calc(100% - 300px); /* Stay on the right */
+    top: calc(95% - 300px); /* Move to the bottom, stay inside viewport */
+    left: calc(95% - 300px); /* Stay on the right */
   }
   75% {
-    top: calc(100% - 300px); /* Stay on the bottom */
-    left: 10px; /* Move to the left */
+    top: calc(95% - 300px); /* Stay at the bottom */
+    left: 5%; /* Move to the left */
   }
   100% {
-    top: 10px;
-    left: 10px; /* Back to starting point */
+    top: 5%;
+    left: 5%; /* Back to starting point */
   }
 }
 
