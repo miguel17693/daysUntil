@@ -31,12 +31,12 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* Digital Clock Display with Glass Effect */
+/* Digital Clock Display with Glass Effect on Green */
 #digital-clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  background: rgba(152, 255, 152, 0.2); /* Glass effect on green */
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Outer shadow for depth */
@@ -48,6 +48,7 @@ h1 {
   flex-shrink: 1; /* Allow shrinking */
 }
 
+/* Time Unit Styling */
 .time-unit {
   display: flex;
   flex-direction: column;
@@ -93,33 +94,45 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  
   .separator {
       font-size: 2.5em;
   }
-  
+
   h1 {
       font-size: 2em;
   }
 }
 
 @media (max-width: 480px) {
-  #digital-clock {
-      justify-content: space-between; /* Spread units evenly */
+  /* Ensure full width of the screen */
+  body {
+      justify-content: flex-start;
+      align-items: flex-start;
   }
 
-  .time-unit span {
-      font-size: 1.8em; /* Adjust size for smaller screens */
+  .container {
+      width: 100%;
+      padding: 20px 10px;
+  }
+
+  #digital-clock {
+      width: 100%; /* Make the countdown occupy full width */
+      flex-direction: column; /* Stack on mobile */
+      padding: 20px 10px;
+  }
+
+  .time-unit {
+      margin: 5px 0;
   }
 
   .separator {
-      font-size: 2em;
+      display: none;
   }
-  
+
   h1 {
       font-size: 1.5em;
   }
-  
+
   .image-section img {
       width: 100%;
       max-width: none;
